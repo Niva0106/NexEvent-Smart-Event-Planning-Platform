@@ -1,0 +1,336 @@
+.settings-page {
+  min-height: 100vh;
+  padding: 40px 50px 60px;
+  box-sizing: border-box;
+  background: #f6f7fb;
+  color: #182033;
+}
+
+.settings-header {
+  margin-bottom: 35px;
+}
+
+.settings-back-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #6855e9;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-header h1 {
+  margin: 0 0 8px;
+  color: #172039;
+  font-size: 36px;
+  letter-spacing: -1px;
+}
+
+.settings-header p {
+  margin: 0;
+  color: #8490a7;
+  font-size: 15px;
+}
+
+.settings-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings-card {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  border: 1px solid #e1e5ed;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(30, 40, 70, 0.04);
+}
+
+.settings-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #eeeaff;
+  color: #6955e8;
+}
+
+.settings-card-content {
+  flex: 1;
+}
+
+.settings-card-content h2 {
+  margin: 0 0 6px;
+  color: #202940;
+  font-size: 18px;
+}
+
+.settings-card-content p {
+  margin: 0 0 20px;
+  color: #8994a9;
+  font-size: 13px;
+}
+
+.settings-profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.settings-avatar {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7258ff, #4e7cff);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.settings-profile div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.settings-profile strong {
+  color: #293249;
+  font-size: 14px;
+}
+
+.settings-profile span {
+  color: #8b96aa;
+  font-size: 12px;
+}
+
+.settings-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #4e5b73;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-toggle-row input {
+  width: 18px;
+  height: 18px;
+  accent-color: #6955e8;
+  cursor: pointer;
+}
+
+.settings-action-button {
+  padding: 11px 17px;
+  border: 1px solid #dfe2ea;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #6350df;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-action-button:hover {
+  background: #f7f5ff;
+  border-color: #6a55e8;
+}
+
+.settings-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 20, 42, 0.55);
+}
+
+.settings-password-modal {
+  position: relative;
+  width: 460px;
+  max-width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(15, 20, 50, 0.2);
+}
+
+.settings-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background: #f3f4f8;
+  color: #68748c;
+  cursor: pointer;
+}
+
+.settings-modal-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  background: #eeeaff;
+  color: #6955e8;
+}
+
+.settings-password-modal h2 {
+  margin: 0 0 7px;
+  color: #1d263c;
+  font-size: 23px;
+}
+
+.settings-password-modal > p {
+  margin: 0 0 25px;
+  color: #8994a9;
+  font-size: 13px;
+}
+
+.settings-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.settings-password-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.settings-password-field label {
+  color: #39445c;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settings-password-field > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.settings-password-field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 48px 0 13px;
+  box-sizing: border-box;
+  border: 1px solid #dfe3eb;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #263148;
+  font-size: 13px;
+}
+
+.settings-password-field input:focus {
+  border-color: #6a55e8;
+  box-shadow: 0 0 0 3px rgba(106, 81, 237, 0.08);
+}
+
+.settings-password-field > div > button {
+  position: absolute;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #7c879d;
+  cursor: pointer;
+}
+
+.settings-password-error {
+  padding: 11px 13px;
+  border-radius: 9px;
+  background: #fff0f0;
+  color: #d14c4c;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-password-success {
+  padding: 11px 13px;
+  border-radius: 9px;
+  background: #eaf8ef;
+  color: #2d965b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.settings-password-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.settings-cancel-button,
+.settings-save-button {
+  flex: 1;
+  height: 45px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-cancel-button {
+  border: 1px solid #dfe2ea;
+  background: #ffffff;
+  color: #65718a;
+}
+
+.settings-save-button {
+  border: none;
+  background: #6a51ed;
+  color: #ffffff;
+}
+
+.settings-save-button:hover {
+  background: #5d45dd;
+}
+
+@media (max-width: 650px) {
+  .settings-page {
+    padding: 30px 20px 45px;
+  }
+
+  .settings-card {
+    padding: 20px;
+  }
+
+  .settings-password-modal {
+    padding: 25px 20px;
+  }
+
+  .settings-password-actions {
+    flex-direction: column;
+  }
+}

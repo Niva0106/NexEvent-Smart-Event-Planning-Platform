@@ -1,0 +1,1010 @@
+/* =========================================================
+   EVENT REGISTRATION - BUBBLE THEME
+========================================================= */
+
+.event-registration-card {
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  margin: 45px auto;
+  padding: 48px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(109, 94, 252, 0.12) 0,
+      rgba(109, 94, 252, 0.12) 55px,
+      transparent 56px
+    ),
+    radial-gradient(
+      circle at 94% 8%,
+      rgba(91, 183, 255, 0.12) 0,
+      rgba(91, 183, 255, 0.12) 75px,
+      transparent 76px
+    ),
+    radial-gradient(
+      circle at 90% 92%,
+      rgba(173, 124, 255, 0.1) 0,
+      rgba(173, 124, 255, 0.1) 60px,
+      transparent 61px
+    ),
+    #ffffff;
+
+  border: 1px solid rgba(109, 94, 252, 0.12);
+  border-radius: 26px;
+
+  box-shadow:
+    0 20px 55px rgba(31, 35, 60, 0.09),
+    0 4px 15px rgba(109, 94, 252, 0.05);
+
+  box-sizing: border-box;
+}
+
+/* Floating bubble decorations */
+
+.event-registration-card::before {
+  content: "";
+  position: absolute;
+
+  width: 110px;
+  height: 110px;
+
+  top: -42px;
+  right: 170px;
+
+  border-radius: 50%;
+
+  background: rgba(109, 94, 252, 0.06);
+
+  box-shadow:
+    120px 65px 0 -22px rgba(91, 183, 255, 0.07),
+    -90px 260px 0 -30px rgba(173, 124, 255, 0.07);
+
+  pointer-events: none;
+}
+
+.event-registration-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75px;
+  height: 75px;
+
+  bottom: -25px;
+  left: 45px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 183, 255, 0.07);
+
+  box-shadow:
+    105px -35px 0 -20px rgba(109, 94, 252, 0.06),
+    650px -160px 0 -25px rgba(173, 124, 255, 0.06);
+
+  pointer-events: none;
+}
+
+/* Keep actual content above bubbles */
+
+.registration-header,
+.event-registration-card form,
+.registration-secure-note,
+.registration-success {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.registration-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.registration-label {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+
+  color: #6d5efc;
+}
+
+.registration-header h3 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+  line-height: 1.25;
+
+  color: #171827;
+}
+
+.registration-header p {
+  margin: 0;
+  max-width: 520px;
+
+  color: #73758a;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRICE BUBBLE
+========================================================= */
+
+.registration-price {
+  position: relative;
+
+  min-width: 140px;
+  padding: 17px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.8) 14px,
+      transparent 15px
+    ),
+    linear-gradient(
+      135deg,
+      #f4f1ff,
+      #f8f7ff
+    );
+
+  border: 1px solid rgba(109, 94, 252, 0.12);
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 22px rgba(109, 94, 252, 0.08);
+}
+
+.registration-price::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  left: -7px;
+  bottom: 12px;
+
+  border-radius: 50%;
+
+  background: rgba(109, 94, 252, 0.08);
+}
+
+.registration-price span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  color: #77758b;
+}
+
+.registration-price strong {
+  font-size: 26px;
+  color: #5d4ff0;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.registration-field {
+  margin-bottom: 19px;
+}
+
+.registration-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #292b3d;
+}
+
+.registration-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 54px;
+  padding: 0 16px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid #dedfea;
+  border-radius: 15px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.registration-input:hover {
+  border-color: #c9c5f7;
+}
+
+.registration-input:focus-within {
+  border-color: #6d5efc;
+
+  box-shadow:
+    0 0 0 4px rgba(109, 94, 252, 0.1),
+    0 7px 20px rgba(109, 94, 252, 0.06);
+
+  transform: translateY(-1px);
+}
+
+.registration-input svg {
+  flex-shrink: 0;
+  color: #888a9d;
+}
+
+.registration-input:focus-within svg {
+  color: #6d5efc;
+}
+
+.registration-input input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+  color: #202134;
+}
+
+.registration-input input::placeholder {
+  color: #a1a2b1;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.registration-error {
+  margin: 15px 0;
+  padding: 13px 15px;
+
+  border-radius: 13px;
+
+  background:
+    radial-gradient(
+      circle at 95% 15%,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.8) 10px,
+      transparent 11px
+    ),
+    #fff1f1;
+
+  border: 1px solid #ffd5d5;
+
+  color: #c53c3c;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   PAYMENT BUTTON
+========================================================= */
+
+.registration-pay-button {
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  height: 55px;
+
+  margin-top: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border: none;
+  border-radius: 15px;
+
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(255, 255, 255, 0.2) 0,
+      rgba(255, 255, 255, 0.2) 18px,
+      transparent 19px
+    ),
+    linear-gradient(
+      135deg,
+      #6d5efc,
+      #806ff8
+    );
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 24px rgba(109, 94, 252, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.registration-pay-button:hover {
+  background:
+    radial-gradient(
+      circle at 88% 20%,
+      rgba(255, 255, 255, 0.22) 0,
+      rgba(255, 255, 255, 0.22) 18px,
+      transparent 19px
+    ),
+    linear-gradient(
+      135deg,
+      #5d4ff0,
+      #7361ed
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 30px rgba(109, 94, 252, 0.28);
+}
+
+.registration-pay-button:active {
+  transform: translateY(0);
+}
+
+.registration-pay-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   LOADING SPINNER
+========================================================= */
+
+.registration-spinner {
+  width: 17px;
+  height: 17px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation:
+    registration-spin 0.7s linear infinite;
+}
+
+@keyframes registration-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   SECURE MESSAGE
+========================================================= */
+
+.registration-secure-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 18px;
+
+  color: #858799;
+  font-size: 13px;
+}
+
+.registration-secure-note svg {
+  color: #35a56f;
+}
+
+
+/* =========================================================
+   SUCCESS PAGE
+========================================================= */
+
+.registration-success {
+  text-align: center;
+}
+
+.success-icon {
+  position: relative;
+
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at 30% 25%,
+      rgba(255, 255, 255, 0.9) 0,
+      rgba(255, 255, 255, 0.9) 8px,
+      transparent 9px
+    ),
+    #eafaf2;
+
+  color: #27a86b;
+
+  box-shadow:
+    0 8px 24px rgba(39, 168, 107, 0.12);
+}
+
+.success-icon::before {
+  content: "";
+
+  position: absolute;
+
+  width: 86px;
+  height: 86px;
+
+  border-radius: 50%;
+
+  border: 1px dashed rgba(39, 168, 107, 0.2);
+}
+
+.registration-success h3 {
+  margin: 0 0 8px;
+
+  font-size: 30px;
+  line-height: 1.2;
+
+  color: #171827;
+}
+
+.registration-success p {
+  margin: 0 auto 25px;
+
+  color: #73758a;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   QR CODE BOX
+========================================================= */
+
+.qr-box {
+  position: relative;
+
+  max-width: 310px;
+
+  margin: 0 auto 25px;
+  padding: 24px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(109, 94, 252, 0.13);
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(109, 94, 252, 0.08) 0,
+      rgba(109, 94, 252, 0.08) 32px,
+      transparent 33px
+    ),
+    radial-gradient(
+      circle at 95% 90%,
+      rgba(91, 183, 255, 0.08) 0,
+      rgba(91, 183, 255, 0.08) 28px,
+      transparent 29px
+    ),
+    #fafaff;
+
+  box-shadow:
+    0 10px 28px rgba(31, 35, 60, 0.06);
+}
+
+.qr-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-bottom: 17px;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  color: #292b3d;
+}
+
+.qr-title svg {
+  color: #6d5efc;
+}
+
+.registration-qr {
+  width: 190px;
+  height: 190px;
+
+  display: block;
+
+  margin: 0 auto 15px;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 6px 18px rgba(31, 35, 60, 0.08);
+}
+
+.qr-box > strong {
+  display: block;
+
+  font-size: 14px;
+
+  color: #5d4ff0;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   REGISTRATION INFORMATION
+========================================================= */
+
+.registration-info {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 13px;
+
+  text-align: left;
+}
+
+.registration-info > div {
+  position: relative;
+
+  padding: 16px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  background:
+    radial-gradient(
+      circle at 92% 10%,
+      rgba(109, 94, 252, 0.07) 0,
+      rgba(109, 94, 252, 0.07) 22px,
+      transparent 23px
+    ),
+    #f7f7fb;
+
+  border: 1px solid rgba(109, 94, 252, 0.06);
+}
+
+.registration-info span {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+
+  color: #858799;
+}
+
+.registration-info strong {
+  font-size: 14px;
+
+  color: #27293a;
+
+  word-break: break-word;
+}
+
+.payment-success {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #27a86b !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .event-registration-card {
+    margin: 22px auto;
+    padding: 22px;
+
+    border-radius: 20px;
+  }
+
+  .registration-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .registration-price {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .registration-header h3 {
+    font-size: 24px;
+  }
+
+  .registration-header p {
+    font-size: 14px;
+  }
+
+  .registration-info {
+    grid-template-columns: 1fr;
+  }
+
+  .registration-pay-button {
+    height: 53px;
+    font-size: 14px;
+  }
+
+  .registration-qr {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media (max-width: 420px) {
+  .event-registration-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .registration-header h3 {
+    font-size: 22px;
+  }
+
+  .registration-input {
+    height: 51px;
+  }
+
+  .registration-pay-button {
+    font-size: 13px;
+  }
+
+  .qr-box {
+    padding: 18px;
+  }
+}
+
+.registration-email-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 24px 0;
+  padding: 18px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  color: #1e3a8a;
+}
+
+.registration-email-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+  background: #dbeafe;
+  border-radius: 12px;
+}
+
+.registration-email-notice strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.registration-email-notice p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   UNIQUE EVENT CAPACITY THEME
+========================================= */
+
+.registration-capacity-card {
+  position: relative;
+  width: 100%;
+  margin: 22px 0;
+  padding: 22px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 22px;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  border-radius: 20px;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(168, 85, 247, 0.14),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(99, 102, 241, 0.12),
+      transparent 35%
+    ),
+    rgba(255, 255, 255, 0.72);
+
+  box-shadow:
+    0 14px 35px rgba(76, 29, 149, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.registration-capacity-card:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(124, 58, 237, 0.38);
+
+  box-shadow:
+    0 18px 42px rgba(76, 29, 149, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================
+   CAPACITY BOX
+========================================= */
+
+.capacity-info-box {
+  position: relative;
+  z-index: 2;
+
+  flex: 1;
+  min-width: 0;
+
+  padding: 4px 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  transition: transform 0.25s ease;
+}
+
+.capacity-info-box:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.capacity-info-label {
+  margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b5b83;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.capacity-info-label::before {
+  content: "";
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #6d28d9
+  );
+
+  box-shadow:
+    0 0 0 4px rgba(124, 58, 237, 0.10),
+    0 0 12px rgba(124, 58, 237, 0.35);
+}
+
+
+/* =========================================
+   MAIN NUMBER
+========================================= */
+
+.capacity-info-value {
+  display: block;
+
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.15;
+
+  color: #3b176d;
+
+  letter-spacing: -0.5px;
+
+  background: linear-gradient(
+    135deg,
+    #4c1d95,
+    #7c3aed
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.capacity-info-subtitle {
+  margin-top: 6px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  color: #8a7a9d;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.capacity-info-divider {
+  width: 1px;
+  min-height: 70px;
+
+  align-self: center;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(124, 58, 237, 0.25),
+    transparent
+  );
+}
+
+
+/* =========================================
+   FULL EVENT STATE
+========================================= */
+
+.capacity-info-full {
+  padding: 12px 16px;
+
+  border-radius: 14px;
+
+  background: rgba(254, 242, 242, 0.65);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.capacity-info-full .capacity-info-label {
+  color: #991b1b;
+}
+
+.capacity-info-full .capacity-info-label::before {
+  background: #ef4444;
+
+  box-shadow:
+    0 0 0 4px rgba(239, 68, 68, 0.10),
+    0 0 12px rgba(239, 68, 68, 0.30);
+}
+
+.capacity-info-full .capacity-info-value {
+  background: linear-gradient(
+    135deg,
+    #dc2626,
+    #ef4444
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.capacity-info-full .capacity-info-subtitle {
+  color: #b45353;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .registration-capacity-card {
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 18px;
+  }
+
+  .capacity-info-box {
+    padding: 4px 2px;
+  }
+
+  .capacity-info-divider {
+    width: 100%;
+    min-height: 1px;
+    height: 1px;
+
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(124, 58, 237, 0.25),
+      transparent
+    );
+  }
+
+  .capacity-info-value {
+    font-size: 24px;
+  }
+
+  .capacity-info-full {
+    padding: 14px;
+  }
+}

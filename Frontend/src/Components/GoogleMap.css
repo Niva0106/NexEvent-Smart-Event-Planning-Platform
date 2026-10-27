@@ -1,0 +1,125 @@
+/* ================================
+   WEATHER ANIMATIONS
+================================ */
+
+.weather-india-badge {
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #eef4ff;
+  color: #3157a4;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.weather-icon-animated {
+  animation:
+    weatherFloat 3s ease-in-out infinite,
+    weatherAppear 0.8s ease-out;
+}
+
+.animated-temperature {
+  animation: temperatureAppear 1.2s ease-out;
+}
+
+@keyframes weatherFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes weatherAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes temperatureAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.weather-loading-icon {
+  font-size: 58px;
+  margin-bottom: 15px;
+
+  animation:
+    weatherFloat 2s ease-in-out infinite;
+}
+
+.weather-loading-spinner {
+  width: 28px;
+  height: 28px;
+
+  border: 3px solid #e5e7eb;
+  border-top-color: #4f46e5;
+
+  border-radius: 50%;
+
+  animation:
+    weatherSpin 0.8s linear infinite;
+}
+
+@keyframes weatherSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.weather-loading p {
+  margin-top: 12px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.weather-error {
+  min-height: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 25px;
+}
+
+.weather-error-icon {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.weather-error h3 {
+  margin: 0 0 7px;
+  color: #344054;
+}
+
+.weather-error p {
+  max-width: 350px;
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 13px;
+  line-height: 1.6;
+}

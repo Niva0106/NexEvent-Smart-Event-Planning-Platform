@@ -1,0 +1,444 @@
+.navbar {
+  position: relative;
+  width: 100%;
+  height: 76px;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #e5e7eb;
+
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1280px;
+  height: 76px;
+
+  margin: 0 auto;
+  padding: 0 32px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+/* LOGO */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5
+  );
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+/* NAVIGATION */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-links button {
+  position: relative;
+
+  padding: 5px 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #64748b;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-links button:hover {
+  color: #4f46e5;
+}
+
+.navbar-links button::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 10px;
+
+  background: #6366f1;
+
+  transform: translateX(-50%);
+
+  transition: width 0.2s ease;
+}
+
+.navbar-links button:hover::after {
+  width: 18px;
+}
+
+/* RIGHT SIDE */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.login-btn {
+  height: 42px;
+
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #475569;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  color: #4f46e5;
+  background: #f5f3ff;
+}
+
+.get-started-btn {
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 0 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #4f46e5
+  );
+
+  color: white;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.25);
+}
+
+/* MOBILE */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: white;
+
+  color: #1e293b;
+
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+  .navbar-container {
+    padding: 0 22px;
+  }
+
+  .navbar-links {
+    gap: 24px;
+  }
+
+  .navbar-links button {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .navbar {
+    height: 68px;
+  }
+
+  .navbar-container {
+    height: 68px;
+    padding: 0 18px;
+  }
+
+  .navbar-links,
+  .navbar-actions {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    width: calc(100% - 24px);
+
+    margin: 0 12px 12px;
+    padding: 14px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  }
+
+  .mobile-menu button {
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #475569;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+  }
+
+  .mobile-menu button:hover {
+    background: #f5f3ff;
+    color: #4f46e5;
+  }
+
+  .mobile-menu .mobile-login {
+    margin-top: 6px;
+
+    justify-content: center;
+
+    background: #f8fafc;
+  }
+
+  .mobile-menu .mobile-start {
+    margin-top: 4px;
+
+    justify-content: center;
+    gap: 8px;
+
+    background: linear-gradient(
+      135deg,
+      #7c3aed,
+      #4f46e5
+    );
+
+    color: white;
+  }
+}
+
+
+
+/* =========================================================
+   NEXEVENT DARK MODE TOGGLE
+   ========================================================= */
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #6d28d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+  backdrop-filter: blur(12px);
+}
+
+.theme-toggle:hover {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.35);
+}
+
+.mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================================
+   GLOBAL DARK MODE
+   ========================================================= */
+
+html.dark-mode {
+  color-scheme: dark;
+}
+
+html.dark-mode body {
+  background: #100b1c;
+  color: #f4efff;
+}
+
+html.dark-mode .navbar {
+  background: rgba(16, 11, 28, 0.88);
+  border-bottom-color: rgba(196, 181, 253, 0.14);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
+}
+
+html.dark-mode .navbar-logo {
+  color: #f5efff;
+}
+
+html.dark-mode .navbar-links button {
+  color: #cfc3df;
+}
+
+html.dark-mode .navbar-links button:hover {
+  color: #c4b5fd;
+}
+
+html.dark-mode .theme-toggle {
+  background: rgba(139, 92, 246, 0.14);
+  border-color: rgba(196, 181, 253, 0.22);
+  color: #ddd6fe;
+}
+
+html.dark-mode .theme-toggle:hover {
+  background: rgba(139, 92, 246, 0.24);
+  border-color: rgba(196, 181, 253, 0.38);
+}
+
+html.dark-mode .login-btn {
+  color: #ddd6fe;
+}
+
+html.dark-mode .login-btn:hover {
+  color: #ffffff;
+}
+
+html.dark-mode .mobile-menu {
+  background: rgba(18, 12, 31, 0.98);
+  border-top-color: rgba(196, 181, 253, 0.12);
+}
+
+html.dark-mode .mobile-menu button {
+  color: #ddd6fe;
+}
+
+html.dark-mode .mobile-menu button:hover {
+  background: rgba(139, 92, 246, 0.12);
+  color: #ffffff;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .navbar-actions {
+    display: none;
+  }
+
+  .mobile-actions {
+    display: flex;
+  }
+}

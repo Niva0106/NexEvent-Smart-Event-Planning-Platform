@@ -1,0 +1,588 @@
+.registration-qr-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(59, 130, 246, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(139, 92, 246, 0.14),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(14, 165, 233, 0.12),
+      transparent 35%
+    ),
+    #f8fafc;
+}
+
+
+.registration-qr-container {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================================
+   BUBBLES
+   ========================================================= */
+
+.qr-bubble {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.55;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+
+.qr-bubble-one {
+  width: 180px;
+  height: 180px;
+  top: 60px;
+  left: -70px;
+  background: rgba(96, 165, 250, 0.14);
+}
+
+
+.qr-bubble-two {
+  width: 120px;
+  height: 120px;
+  top: 320px;
+  right: -40px;
+  background: rgba(167, 139, 250, 0.15);
+}
+
+
+.qr-bubble-three {
+  width: 70px;
+  height: 70px;
+  bottom: 130px;
+  left: 8%;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+
+.qr-bubble-four {
+  width: 100px;
+  height: 100px;
+  bottom: 50px;
+  right: 8%;
+  background: rgba(129, 140, 248, 0.12);
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.registration-qr-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow:
+    0 15px 40px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+
+.registration-qr-success-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+
+.registration-qr-brand {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+.registration-qr-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+
+.registration-qr-header p:last-child {
+  margin: 7px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.registration-qr-card {
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.1);
+}
+
+
+.registration-qr-title {
+  text-align: center;
+}
+
+
+.registration-qr-title h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 24px;
+}
+
+
+.registration-qr-title p {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   QR IMAGE
+   ========================================================= */
+
+.registration-qr-image-wrapper {
+  width: 280px;
+  height: 280px;
+  margin: 28px auto 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  box-shadow:
+    0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+.registration-qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.registration-qr-download {
+  width: 100%;
+  max-width: 280px;
+  height: 46px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 11px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.registration-qr-download:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================================
+   REGISTRATION ID
+   ========================================================= */
+
+.registration-qr-id-box {
+  padding: 16px;
+  margin-bottom: 22px;
+  text-align: center;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+}
+
+
+.registration-qr-id-box span {
+  display: block;
+  margin-bottom: 6px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.registration-qr-id-box strong {
+  color: #0f172a;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   DETAILS
+   ========================================================= */
+
+.registration-qr-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+
+.registration-detail {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+
+.registration-detail-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+
+.registration-detail div:last-child {
+  min-width: 0;
+}
+
+
+.registration-detail span {
+  display: block;
+  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+.registration-detail strong {
+  display: block;
+  overflow: hidden;
+  color: #0f172a;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAYMENT SUCCESS
+   ========================================================= */
+
+.registration-payment-success {
+  margin-top: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 14px;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #15803d;
+}
+
+
+.registration-payment-success > svg {
+  flex-shrink: 0;
+}
+
+
+.registration-payment-success strong {
+  display: block;
+  color: #166534;
+  font-size: 14px;
+}
+
+
+.registration-payment-success span {
+  display: block;
+  margin-top: 3px;
+  color: #4d7c5b;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.registration-qr-note {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+
+
+.registration-qr-note strong {
+  color: #c2410c;
+  font-size: 13px;
+}
+
+
+.registration-qr-note p {
+  margin: 6px 0 0;
+  color: #9a3412;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.registration-qr-footer {
+  padding: 24px 0;
+  text-align: center;
+}
+
+
+.registration-qr-footer p {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+
+.registration-qr-footer span {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.registration-qr-loading {
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+
+.registration-qr-loading h2 {
+  margin: 20px 0 8px;
+  color: #0f172a;
+}
+
+
+.registration-qr-loading p {
+  margin: 0;
+  color: #64748b;
+}
+
+
+.registration-qr-spinner {
+  color: #2563eb;
+  animation: registrationQrSpin 1s linear infinite;
+}
+
+
+@keyframes registrationQrSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.registration-qr-error {
+  width: 100%;
+  max-width: 520px;
+  margin: 100px auto;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 22px;
+  background: #ffffff;
+  border: 1px solid #fecaca;
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+
+.registration-qr-error-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+.registration-qr-error h2 {
+  margin: 0 0 10px;
+  color: #991b1b;
+}
+
+
+.registration-qr-error p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+
+.registration-qr-error-id {
+  margin-top: 20px !important;
+}
+
+
+.registration-qr-error-id strong {
+  display: block;
+  margin-top: 5px;
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .registration-qr-page {
+    padding: 20px 12px;
+  }
+
+
+  .registration-qr-header {
+    padding: 18px;
+    gap: 12px;
+  }
+
+
+  .registration-qr-success-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+  }
+
+
+  .registration-qr-header h1 {
+    font-size: 21px;
+  }
+
+
+  .registration-qr-header p:last-child {
+    font-size: 12px;
+  }
+
+
+  .registration-qr-card {
+    padding: 20px 15px;
+    border-radius: 20px;
+  }
+
+
+  .registration-qr-title h2 {
+    font-size: 20px;
+  }
+
+
+  .registration-qr-image-wrapper {
+    width: 240px;
+    height: 240px;
+  }
+
+
+  .registration-qr-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  .registration-detail strong {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+
+  .registration-qr-loading,
+  .registration-qr-error {
+    margin: 50px auto;
+    padding: 28px 20px;
+  }
+
+}

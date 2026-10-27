@@ -1,0 +1,651 @@
+/* =========================================================
+   NexEvent Attendance
+   Purple Aurora + Glassmorphism Theme
+   ========================================================= */
+
+.attendance-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  padding: 96px 28px 48px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(139, 92, 246, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(168, 85, 247, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(124, 58, 237, 0.08),
+      transparent 35%
+    ),
+    #faf9ff;
+
+  color: #281b3b;
+}
+
+
+/* =========================================================
+   Aurora Decorations
+   ========================================================= */
+
+.attendance-page::before,
+.attendance-page::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+
+  border-radius: 50%;
+  filter: blur(75px);
+
+  pointer-events: none;
+}
+
+.attendance-page::before {
+  width: 420px;
+  height: 420px;
+
+  top: 80px;
+  left: -190px;
+
+  background: rgba(139, 92, 246, 0.18);
+}
+
+.attendance-page::after {
+  width: 380px;
+  height: 380px;
+
+  top: 380px;
+  right: -160px;
+
+  background: rgba(168, 85, 247, 0.15);
+}
+
+
+/* =========================================================
+   Header
+   ========================================================= */
+
+.attendance-header {
+  width: min(1050px, 100%);
+  margin: 0 auto 28px;
+}
+
+.attendance-header > div {
+  max-width: 700px;
+}
+
+.attendance-header h1 {
+  margin: 0;
+
+  color: #281b3b;
+
+  font-size: clamp(2.1rem, 3.5vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  font-weight: 800;
+}
+
+.attendance-header p {
+  margin: 13px 0 0;
+
+  color: #756b85;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   Main Cards
+   ========================================================= */
+
+.attendance-card {
+  width: min(1050px, 100%);
+  margin: 0 auto 20px;
+
+  padding: 27px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(139, 92, 246, 0.13);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    0 16px 45px rgba(76, 29, 149, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  backdrop-filter: blur(16px);
+}
+
+
+/* =========================================================
+   Event Selector
+   ========================================================= */
+
+.attendance-card > label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #32174f;
+
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.attendance-card > select {
+  width: 100%;
+  height: 50px;
+
+  box-sizing: border-box;
+
+  padding: 0 42px 0 15px;
+
+  border: 1px solid rgba(124, 58, 237, 0.14);
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.95),
+      rgba(250, 247, 255, 0.88)
+    );
+
+  color: #35184f;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  outline: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 18px rgba(76, 29, 149, 0.035);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.attendance-card > select:hover {
+  border-color: rgba(124, 58, 237, 0.25);
+
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.attendance-card > select:focus {
+  border-color: rgba(124, 58, 237, 0.45);
+
+  box-shadow:
+    0 0 0 4px rgba(124, 58, 237, 0.08),
+    0 8px 22px rgba(76, 29, 149, 0.06);
+}
+
+
+/* =========================================================
+   Scanner Card
+   ========================================================= */
+
+.attendance-card h2 {
+  margin: 0;
+
+  color: #35184f;
+
+  font-size: 21px;
+  letter-spacing: -0.02em;
+  font-weight: 750;
+}
+
+.attendance-card h2 + p {
+  margin: 8px 0 19px;
+
+  color: #8a8094;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   QR Scanner
+   ========================================================= */
+
+#qr-reader {
+  width: 100% !important;
+  max-width: 320px !important;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(124, 58, 237, 0.13) !important;
+  border-radius: 18px;
+
+  background: rgba(250, 248, 255, 0.8);
+
+  box-shadow:
+    0 15px 35px rgba(76, 29, 149, 0.08);
+
+  box-sizing: border-box;
+}
+
+
+/* Camera video */
+
+#qr-reader video {
+  width: 100% !important;
+  max-width: 100%;
+
+  display: block;
+
+  border-radius: 16px;
+}
+
+
+/* Scanner controls */
+
+#qr-reader__dashboard {
+  padding: 12px !important;
+
+  background: rgba(255, 255, 255, 0.72);
+}
+
+#qr-reader__dashboard button {
+  min-height: 39px;
+
+  padding: 0 15px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  color: #fff;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(124, 58, 237, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#qr-reader__dashboard button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 11px 24px rgba(124, 58, 237, 0.25);
+}
+
+#qr-reader__dashboard select {
+  max-width: 100%;
+
+  padding: 8px 10px;
+
+  border: 1px solid rgba(124, 58, 237, 0.13);
+  border-radius: 9px;
+
+  background: #fff;
+
+  color: #35184f;
+
+  font-size: 12px;
+
+  outline: none;
+}
+
+
+/* =========================================================
+   Scanner Status
+   ========================================================= */
+
+.scanner-status {
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 15px auto 0;
+
+  padding: 10px 14px;
+
+  border: 1px solid rgba(124, 58, 237, 0.11);
+  border-radius: 999px;
+
+  background: rgba(124, 58, 237, 0.06);
+
+  color: #7c3aed;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   Success Card
+   ========================================================= */
+
+.attendance-success {
+  width: min(650px, 100%);
+
+  margin: 22px auto 0;
+
+  padding: 36px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(250, 247, 255, 0.78)
+    );
+
+  box-shadow:
+    0 20px 55px rgba(76, 29, 149, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(18px);
+
+  text-align: center;
+}
+
+
+/* Success Icon */
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  color: #fff;
+
+  font-size: 28px;
+  font-weight: 800;
+
+  box-shadow:
+    0 14px 30px rgba(124, 58, 237, 0.23);
+}
+
+.attendance-success h2 {
+  margin: 0;
+
+  color: #32174f;
+
+  font-size: 25px;
+  letter-spacing: -0.025em;
+}
+
+.attendance-success h3 {
+  margin: 10px 0 6px;
+
+  color: #7c3aed;
+
+  font-size: 19px;
+  font-weight: 750;
+}
+
+.attendance-success > p {
+  margin: 0;
+
+  color: #918697;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   Attendance Count
+   ========================================================= */
+
+.attendance-count {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin: 26px 0;
+}
+
+.attendance-count > div {
+  padding: 17px 12px;
+
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  border-radius: 14px;
+
+  background: rgba(250, 248, 255, 0.72);
+}
+
+.attendance-count strong {
+  display: block;
+
+  color: #35184f;
+
+  font-size: 27px;
+  line-height: 1.1;
+}
+
+.attendance-count span {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #918697;
+
+  font-size: 11px;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   Success Button
+   ========================================================= */
+
+.attendance-success button,
+.attendance-error button {
+  min-height: 45px;
+
+  padding: 0 19px;
+
+  border: 0;
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  color: #fff;
+
+  font: inherit;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 22px rgba(124, 58, 237, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.attendance-success button:hover,
+.attendance-error button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 28px rgba(124, 58, 237, 0.27);
+}
+
+
+/* =========================================================
+   Error Card
+   ========================================================= */
+
+.attendance-error {
+  width: min(650px, 100%);
+
+  margin: 22px auto 0;
+
+  padding: 24px;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  border-radius: 18px;
+
+  background: rgba(255, 247, 247, 0.78);
+
+  box-shadow:
+    0 14px 35px rgba(127, 29, 29, 0.05);
+
+  text-align: center;
+}
+
+.attendance-error strong {
+  display: block;
+
+  color: #9f1239;
+
+  font-size: 15px;
+}
+
+.attendance-error p {
+  margin: 7px 0 16px;
+
+  color: #9f6b78;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   Responsive - 700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .attendance-page {
+    padding: 90px 20px 35px;
+  }
+
+  .attendance-card {
+    padding: 22px;
+
+    border-radius: 19px;
+  }
+
+  #qr-reader {
+    max-width: 290px !important;
+  }
+
+  .attendance-success {
+    padding: 29px 21px;
+  }
+
+}
+
+
+/* =========================================================
+   Responsive - 500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+  .attendance-page {
+    padding: 86px 14px 30px;
+  }
+
+  .attendance-header h1 {
+    font-size: 2rem;
+  }
+
+  .attendance-header p {
+    font-size: 14px;
+  }
+
+  .attendance-card {
+    padding: 19px;
+  }
+
+  .attendance-card > select {
+    height: 48px;
+    font-size: 13px;
+  }
+
+  #qr-reader {
+    max-width: 260px !important;
+  }
+
+  .attendance-count {
+    grid-template-columns: 1fr;
+  }
+
+  .attendance-count > div {
+    padding: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   Reduced Motion
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .attendance-success button,
+  .attendance-error button,
+  #qr-reader__dashboard button {
+    transition: none;
+  }
+
+}
