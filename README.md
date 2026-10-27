@@ -107,13 +107,6 @@ The application is deployed as separate frontend and backend services.
 - More robust database hosting, backups, and persistence.
 - Automated reminders and expanded notification features.
 
-## 👩‍💻 Developer
-
-**Niveditha N**
-
-- **GitHub:** [@Niva0106](https://github.com/Niva0106)
-- **Project Repository:** [NexEvent](https://github.com/Niva0106/NexEvent-Smart-Event-Planning-Platform)
-
 ---
 
 *Developed as part of the Infosys Springboard Virtual Internship 7.0.*
